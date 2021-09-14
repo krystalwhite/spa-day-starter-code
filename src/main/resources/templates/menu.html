@@ -32,6 +32,9 @@
             </th:if></p>
         <p th:if = "${manipedi} == 'pedicure'" th:insert="fragments :: pedicureDescription">
             </th:if></p>
+        <p th:if = "${manipedi} =='both'" th:insert="fragments :: manicureDescription">
+        <p th:if = "${manipedi} =='both'" th:insert="fragments :: pedicureDescription">
+            </th:if></p>
     </th:block>
 
 </div>
