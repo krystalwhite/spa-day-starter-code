@@ -14,7 +14,7 @@
     <input type="password" name="password">
     <label>Re-enter password: </label>
     <input type="password" name="verify" th:value="${verify}">
-    <p th:if="${password != verify}" th:text="${error}"></p>
+<!--    <p th:unless="${password.equals(verify)}" th:text="${error}"></p>-->
     <input type="submit" name="submit">
 </form>
 
