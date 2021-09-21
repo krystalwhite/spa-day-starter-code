@@ -1,5 +1,6 @@
 package org.launchcode.spaday.controllers;
 
+import org.launchcode.spaday.data.UserData;
 import org.launchcode.spaday.models.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +21,7 @@ public class UserController {
 
         if (user.getPassword().equals(verify)) {
             model.addAttribute("username", user.getUsername());
+            model.addAttribute("userMap", UserData.getAll());
             return "user/index";
         } else {
             String error = "Error: The passwords should match.";
