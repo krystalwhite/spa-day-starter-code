@@ -20,6 +20,7 @@ public class UserController {
     public String processAddUserForm(Model model, @ModelAttribute User user, String verify) {
 
         if (user.getPassword().equals(verify)) {
+            model.addAttribute("user", user);
             model.addAttribute("username", user.getUsername());
             model.addAttribute("userMap", UserData.getAll());
             return "user/index";
