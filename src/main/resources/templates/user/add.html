@@ -7,7 +7,7 @@
 <body>
 
 
-<form method="post" action="/user">
+<form method="post" th:action="${/user}">
 
     <label>Email: </label>
     <input type="email" name="email" th:value="${email}">
