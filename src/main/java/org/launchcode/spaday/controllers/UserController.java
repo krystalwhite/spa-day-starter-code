@@ -35,6 +35,7 @@ public class UserController {
             returnPath = "user/index";
         } else {
             model.addAttribute("error", "Passwords do not match");
+            returnPath = "user/add";
         }
 
         return returnPath;

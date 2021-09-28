@@ -18,6 +18,7 @@ public class User {
     private String password;
 
     @NotBlank(message="Password is required.")
+    @Size(min=6, message = "Password must be 6 or more characters.")
     private String verify;
 
 
