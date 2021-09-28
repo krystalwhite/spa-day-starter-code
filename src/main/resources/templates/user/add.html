@@ -37,7 +37,8 @@
             Verify Password:
             <input name = 'verify'>
         </label>
-            <p class="error" th:errors="${user.verify}"></p>
+<!--            <p class="error" th:errors="${user.verify}"></p>-->
+            <p class="error" th:errors="${user.verifyPassword}"></p>
         </div>
 
         <p th:text="${error}"></p>

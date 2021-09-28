@@ -33,10 +33,16 @@ public class UserController {
 
         if (user.getPassword().equals(user.getVerify())) {
             returnPath = "user/index";
-        } else {
-            model.addAttribute("error", "Passwords do not match");
-            returnPath = "user/add";
         }
+
+
+//        This code was for the studio validation before the bonus.
+//        if (user.getPassword().equals(user.getVerify())) {
+//            returnPath = "user/index";
+//        } else {
+//            model.addAttribute("error", "Passwords do not match");
+//            returnPath = "user/add";
+//        }
 
         return returnPath;
     }
